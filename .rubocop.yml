@@ -1,0 +1,51 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - db/migrate/*
+    - config/**/*
+    - bin/*
+    - lib/tasks/**/*
+
+Bundler/OrderedGems:
+  Exclude:
+    - 'Gemfile'
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+    - 'config/environments/production.rb'
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb'
+
+Style/ExpandPathArguments:
+  Exclude:
+    - 'spec/rails_helper.rb'
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+  Exclude:
+    - '**/*_spec.rb'
+
+Style/BlockDelimiters:
+  Enabled: false
+  Exclude:
+    - '**/*_spec.rb'
+
+Style/Lambda:
+  Enabled: false
