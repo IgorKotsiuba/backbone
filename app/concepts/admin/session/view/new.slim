@@ -1,0 +1,29 @@
+.row.justify-content-center
+  .col-md-8
+    .card-group
+      .card.p-4
+        .card-body
+          h1 Login
+          p.text-muted Sign In to your account
+          / = render '_form'
+          / = form_for model, url: admin_sessions_path do |f|
+          /   .input-group.mb-3
+          /     .input-group-prepend
+          /       span.input-group-text
+          /         i.icon-user
+          /     = f.text_field :username, placeholder: 'Username', class: 'form-control'
+          /   .input-group.mb-4
+          /     .input-group-prepend
+          /       span.input-group-text
+          /         i.icon-lock
+          /     = f.text_field :password, placeholder: 'Password', class: 'form-control'
+          /   .row
+          /     .col-6
+          /       = f.submit 'Login', class: 'button btn btn-primary px-4'
+          /     .col-6.text-right
+          /       button.btn.btn-link.px-0 type="button"  Forgot password?
+
+          = simple_form_for model, url: admin_sessions_path do |f|
+            = f.input :username
+            = f.input :password
+            = f.button :submit, 'Login'

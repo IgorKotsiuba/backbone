@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   namespace :admin do
-    get 'login' => 'sessions#new'
+    root 'sessions#new'
+    resource :sessions, only: %i[create destroy]
+    resources :dashboard, only: :index
   end
 end
